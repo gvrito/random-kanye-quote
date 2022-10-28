@@ -32,7 +32,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Angular build
-        run: ng build --output-path ./_site --base-href /random-kanye-quote/
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
