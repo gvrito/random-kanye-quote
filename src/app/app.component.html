@@ -4,7 +4,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="header">
-      <app-header [isBigScreen]="isBigScreen" (buttonClicked)="openMenu(drawer)"></app-header>
+      <app-header [isBigScreen]="isBigScreen" (buttonClicked)="openMenu()"></app-header>
     </div>
     <div class="content" (click)="closeMenu()">
       <router-outlet></router-outlet>
