@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Change Text Styles</h1>
+<div class="form" [formGroup]="formGroup" mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Font Size:</mat-label>
+        <input formControlName="fontSize" matInput placeholder="Font Size" type="number">
+        <span matSuffix>px</span>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Vertical Position:</mat-label>
+        <input formControlName="bottom" matInput placeholder="Vertical Position:" type="number">
+        <span matSuffix>%</span>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Horizontal Position:</mat-label>
+        <input formControlName="left" matInput placeholder="Horizontal Position:" type="number">
+        <span matSuffix>%</span>
+    </mat-form-field>
+    <div class="color-container">
+        <label for="color-picker">Color:* </label>
+        <input type="color" formControlName="color" id="color-picker">
+    </div>
+    <!-- <mat-form-field>
+        <mat-label>Color:</mat-label>
+        <input formControlName="color" matInput placeholder="Color:" type="text">
+    </mat-form-field> -->
+</div>
+<div class="actions" mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="setStyles(true)">Set Styles</button>
+</div>

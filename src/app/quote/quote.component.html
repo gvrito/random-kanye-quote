@@ -1,0 +1,12 @@
+<div class="random-quote">
+    <div class="actions">
+        <button mat-raised-button color="primary" (click)="generateQuote(true)">New Quote</button>
+        <button mat-raised-button color="primary" (click)="generateImage(true)">New Image</button>
+        <button mat-raised-button color="primary" (click)="changeText()">Change Text</button>
+    </div>
+    <div class="quote">
+        <img [src]="imgUrl">
+        <h1 *ngIf="!customText">{{ quote }}</h1>
+        <h1 *ngIf="customText" [ngStyle]="customStyles">{{ quote }}</h1>
+    </div>
+</div>

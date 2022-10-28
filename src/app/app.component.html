@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer [mode]="isBigScreen ? 'side' : 'over'" [opened]="menuOpened">
+    <app-side-menu></app-side-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="header">
+      <app-header [isBigScreen]="isBigScreen" (buttonClicked)="openMenu(drawer)"></app-header>
+    </div>
+    <div class="content" (click)="closeMenu()">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
