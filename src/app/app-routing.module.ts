@@ -4,8 +4,9 @@ import { QuoteComponent } from './quote/quote.component';
 import { ROUTES } from './core/constants'
 
 const routes: Routes = [
-  { path: '', redirectTo: ROUTES.KANYE, pathMatch: 'full' },
-  { path: ROUTES.KANYE, component: QuoteComponent }
+  // { path: '', redirectTo: ROUTES.KANYE, pathMatch: 'full' },
+  // { path: ROUTES.KANYE, component: QuoteComponent }
+  { path: '', component: QuoteComponent }
 ];
 
 @NgModule({
