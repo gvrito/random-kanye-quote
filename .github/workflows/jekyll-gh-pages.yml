@@ -25,15 +25,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Npm install
+        run: npm install
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      - name: Angular build
+        run: ng build --output-path ./_site --base-href /random-kanye-quote/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
